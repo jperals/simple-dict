@@ -1,0 +1,19 @@
+{
+  "name": "simple-dict",
+  "version": "1.0.0",
+  "description": "Simple, web- and file-based dictionary",
+  "main": "index.html",
+  "dependencies": {
+    "js-yaml": "^3.8.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Dictionary",
+    "yaml"
+  ],
+  "author": "Joan Perals",
+  "license": "ISC"
+}
