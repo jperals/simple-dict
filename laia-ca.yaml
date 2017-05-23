@@ -20,7 +20,6 @@ auó:
   translation: hola
   source: de l'alemany _hallo_
   notes: sovint utilitzat per referir-se a la cançó _Hallo, hallo, schön, dass du da bist_
-avi: avi
 babau:
   translation: gos
   source: "de l'onomatopeia en alemany del lladruc: _Wau-wau!_"
@@ -52,10 +51,7 @@ das:
   source: de l'alemany
 Emma: Emma
 foto: foto
-Iaia:
-  translation:
-    - iaia
-    - Laia
+Iaia: Laia
 Laia: Laia
 mà: mà
 má:
@@ -74,6 +70,9 @@ nana:
   source: de l'alemany _Banane_
 nas: nas
 nei:
+  translation: no
+  source: de l'alemany _nein_
+nein:
   translation: no
   source: de l'alemany _nein_
 nen: nen
