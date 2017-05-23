@@ -1,5 +1,6 @@
 Aba:
   translation: aigua
+Abi!: ai!
 Aió:
   translation: hola
   source: de l'alemany _hallo_
@@ -28,9 +29,6 @@ Baby:
   source: de l'alemany
 Baia:
   translation: En Joan petit quan balla
-Bebe:
-  translation: bebé
-  source: probablement del castellà
 Bai:
   translation: pilota
   source: de l'alemany _Ball_
@@ -40,10 +38,20 @@ Ball:
 Bassa:
   translation: aigua
   source: de l'alemany _Wasser_
+Bebe:
+  translation: bebé
+  source: probablement del castellà
+Bett:
+  traslation: llit
+  source: de l'alemany
 Bibi:
   translation: nadó
   source: probablement de l'alemany _Baby_ o del castellà _bebé_
+Das:
+  translation: això
+  source: de l'alemany
 Emma: Emma
+Foto: foto
 Iaia:
   translation:
     - iaia
@@ -58,6 +66,9 @@ Más:
   source: del castellà
 Més: més
 Mama: Mama
+Mano:
+  translation: mà
+  source: del castellà
 Nana:
   translation: plàtan
   source: de l'alemany _Banane_
@@ -68,6 +79,9 @@ Nei:
 Nen: nen
 Nena: nena
 No: no
+On, on:
+  translation: (onomatopeia del porc)
+  source: del castellà "oink, oink"
 Oixo:
   translation: ós
   source: del castellà _oso_
@@ -85,6 +99,7 @@ Pío:
 Poio:
   translation: pollastre
   source: del castellà
+Poto: foto
 Ta:
   translation:
     - això
@@ -98,3 +113,4 @@ Tete: televisió
 Teti: televisió
 Teyi: televisió
 Tio: Teo
+Vai: cavall
