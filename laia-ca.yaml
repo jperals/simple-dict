@@ -1,33 +1,33 @@
-Aba:
+aba:
   translation: aigua
-Abi!: ai!
-Aió:
+abi!: ai!
+aió:
   translation: hola
   source: de l'alemany _hallo_
-Ati:
+ati:
   translation: Atxís!
   date: 12.05.2017
-Ato:
+ato:
   translation: vehicle
   source: de l'alemany _Auto_ (cotxe)
   notes: '_Auto_ en alemany significa cotxe, però _Ato_ pot referir-se a pràcticament qualsevol vehicle: cotxes, motos, cotxets, bicicletes, barques...'
-Aua:
+aua:
   translation: aigua
-Aua!:
+aua!:
   translation: au!
   source: de l'alemany
-Auó:
+auó:
   translation: hola
   source: de l'alemany _hallo_
   notes: sovint utilitzat per referir-se a la cançó _Hallo, hallo, schön, dass du da bist_
-Avi: avi
-Babau:
+avi: avi
+babau:
   translation: gos
   source: "de l'onomatopeia en alemany del lladruc: _Wau-wau!_"
 Baby:
   translation: Baby
   source: de l'alemany
-Baia:
+baia:
   translation: En Joan petit quan balla
 Bai:
   translation: pilota
@@ -38,79 +38,79 @@ Ball:
 Bassa:
   translation: aigua
   source: de l'alemany _Wasser_
-Bebe:
+bebe:
   translation: bebé
   source: probablement del castellà
 Bett:
   traslation: llit
   source: de l'alemany
-Bibi:
+bibi:
   translation: nadó
   source: probablement de l'alemany _Baby_ o del castellà _bebé_
-Das:
+das:
   translation: això
   source: de l'alemany
 Emma: Emma
-Foto: foto
+foto: foto
 Iaia:
   translation:
     - iaia
     - Laia
 Laia: Laia
-Mà: mà
-Má:
+mà: mà
+má:
   translation: més
   source: del castellà _más_
-Más:
+más:
   translation: més
   source: del castellà
-Més: més
+més: més
 Mama: Mama
-Mano:
+mano:
   translation: mà
   source: del castellà
-Nana:
+nana:
   translation: plàtan
   source: de l'alemany _Banane_
-Nas: nas
-Nei:
+nas: nas
+nei:
   translation: no
   source: de l'alemany _nein_
-Nen: nen
-Nena: nena
-No: no
-On, on:
+nen: nen
+nena: nena
+no: no
+on, on:
   translation: (onomatopeia del porc)
   source: del castellà "oink, oink"
-Oixo:
+oixo:
   translation: ós
   source: del castellà _oso_
-Pan:
+pan:
   translation: pa
   source: del castellà
 Papa: Papa
-Pato:
+pato:
   translation: sabata
   source: del castellà _zapato_
-Pé: peu
-Pío:
+pé: peu
+pío:
   translation: piu (onomatopeia de l'ocell)
   source: del castellà
-Poio:
+poio:
   translation: pollastre
   source: del castellà
-Poto: foto
-Ta:
+poto: foto
+ta:
   translation:
     - això
     - mira!
   source: potser de l'alemany _das_ (això) o _da_ (allí)
-Té: té (imperatiu)
-Ten: tren
+té: té (imperatiu)
+ten: tren
 Teo: Teo
-Teta: teta
-Tete: televisió
-Teti: televisió
-Teyi: televisió
+teta: teta
+tete: televisió
+teti: televisió
+teyi: televisió
 Tio: Teo
-Vai: cavall
+vai: cavall
