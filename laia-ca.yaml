@@ -4,6 +4,8 @@ abi!: ai!
 aió:
   translation: hola
   source: de l'alemany _hallo_
+apa!: apa!
+ata!: salta!
 ati:
   translation: Atxís!
   date: 12.05.2017
@@ -20,6 +22,7 @@ auó:
   translation: hola
   source: de l'alemany _hallo_
   notes: sovint utilitzat per referir-se a la cançó _Hallo, hallo, schön, dass du da bist_
+avi: avi
 babau:
   translation: gos
   source: "de l'onomatopeia en alemany del lladruc: _Wau-wau!_"
@@ -65,6 +68,9 @@ Mama: Mama
 mano:
   translation: mà
   source: del castellà
+met: mitjonet
+metx: xumet
+mia!: mira!
 nana:
   translation: plàtan
   source: de l'alemany _Banane_
@@ -85,16 +91,24 @@ oixo:
   translation: ós
   source: del castellà _oso_
 pan:
-  translation: pa
-  source: del castellà
+  meanings:
+   - translation: pa
+     source: del castellà
+   - elefant
 Papa: Papa
-pato:
+papato:
   translation: sabata
-  source: del castellà _zapato_
+  since: 23.05.2017
+pato:
+  synonym: papato
+  since: 05.2017
 pé: peu
 pío:
   translation: piu (onomatopeia de l'ocell)
   source: del castellà
+pita:
+  translation: porta
+  since: 05.2017
 poio:
   translation: pollastre
   source: del castellà
@@ -113,3 +127,4 @@ teti: televisió
 teyi: televisió
 Tio: Teo
 vai: cavall
+xaixa: gràcies
