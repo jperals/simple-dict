@@ -9,6 +9,7 @@ ata!: salta!
 ati:
   translation: Atxís!
   date: 12.05.2017
+atí: aquí
 ato:
   translation: vehicle
   source: de l'alemany _Auto_ (cotxe)
@@ -34,6 +35,9 @@ baia:
 Bai:
   translation: pilota
   source: de l'alemany _Ball_
+baio:
+  translation: cavall
+  source: del castellà _caballo_
 Ball:
   translation: pilota
   source: de l'alemany
@@ -47,11 +51,14 @@ Bett:
   traslation: llit
   source: de l'alemany
 bibi:
-  translation: nadó
-  source: probablement de l'alemany _Baby_ o del castellà _bebé_
+  - translation: nadó
+    source: probablement de l'alemany _Baby_ o del castellà _bebé_
+  - biberó
+daixa: gràcies
 das:
   translation: això
   source: de l'alemany
+dos: arròs
 Emma: Emma
 foto: foto
 Iaia: Laia
@@ -64,13 +71,23 @@ más:
   translation: més
   source: del castellà
 més: més
+maio:
+  translation: bany
+  source: del castellà _baño_
 Mama: Mama
+Mami: Mami
 mano:
   translation: mà
   source: del castellà
-met: mitjonet
-metx: xumet
+met:
+  - mitjonet
+  - xumet
+Mmmma: Emma
 mia!: mira!
+motos:
+  translation: mocs
+  source: probablement del castellà _mocos_
+  since: ~11.06.2017
 nana:
   translation: plàtan
   source: de l'alemany _Banane_
@@ -83,6 +100,7 @@ nein:
   source: de l'alemany _nein_
 nen: nen
 nena: nena
+nina: gallina
 no: no
 on, on:
   translation: (onomatopeia del porc)
@@ -99,6 +117,8 @@ Papa: Papa
 papato:
   translation: sabata
   since: 23.05.2017
+Papi: Papi
+patas: patates
 pato:
   synonym: papato
   since: 05.2017
@@ -112,6 +132,9 @@ pita:
 poio:
   translation: pollastre
   source: del castellà
+pota:
+  translation: boca
+  since: ~14.06.2017
 poto: foto
 ta:
   translation:
@@ -126,5 +149,11 @@ tete: televisió
 teti: televisió
 teyi: televisió
 Tio: Teo
+Txussi:
+  translation: adéu
+  source: de l'alemany _tschüss_
 vai: cavall
+vale:
+  translation: d'acord
+  source: del castellà
 xaixa: gràcies
