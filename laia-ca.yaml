@@ -1,6 +1,9 @@
 aba:
   translation: aigua
 abi!: ai!
+afa:
+  translation: girafa
+  since: 07.07.2017
 aió:
   translation: hola
   source: de l'alemany _hallo_
@@ -55,11 +58,17 @@ bibi:
     source: probablement de l'alemany _Baby_ o del castellà _bebé_
   - biberó
 Bot: Berndt das Brot
+bote:
+  translation: barca
+  source: del castellà "bote" i de l'alemany "Boot"
 daixa: gràcies
 das:
   translation: això
   source: de l'alemany
 dos: arròs
+Eis:
+  translation: gelat
+  source: de l'alemany
 Emma: Emma
 foto: foto
 Iaia: Laia
@@ -85,6 +94,9 @@ met:
   - xumet
 Mmmma: Emma
 mia!: mira!
+Mosse:
+  translation: Montse
+  since: ~02.07.2017
 motos:
   translation: mocs
   source: probablement del castellà _mocos_
@@ -146,6 +158,12 @@ poto: foto
 Put:
   translation: Berndt das Brot
   since: 23.06.2017
+Sara:
+  translation: Sara
+  since: ~26.06.2017
+sí:
+  translation: sí
+  since: 29.06.2017
 ta:
   translation:
     - això
@@ -160,11 +178,17 @@ tete: televisió
 teti: televisió
 teyi: televisió
 Tio: Teo
+tutus:
+  translation: xoc de caps ("coco")
+  since: ~02.07.2017
 Txussi:
   translation: adéu
   source: de l'alemany _tschüss_
 vai: cavall
 vale:
   translation: d'acord
+  source: del castellà
+vaso:
+  translation: got
   source: del castellà
 xaixa: gràcies
