@@ -1,12 +1,15 @@
 aba:
   translation: aigua
+  pronunciation: /ˈa.βa/
 abi!: ai!
 afa:
   translation: girafa
   since: 07.07.2017
+  pronunciation: /ˈa.fa/
 aió:
   translation: hola
   source: de l'alemany _hallo_
+  pronunciation: /ˈa.ʝo/
 apa!: apa!
 ata!: salta!
 ati:
@@ -47,9 +50,17 @@ Ball:
 Bassa:
   translation: aigua
   source: de l'alemany _Wasser_
+basso:
+  translation: (porta'm en) braços
+  source: del castellà _brazos_
+  since: 08.07.2017
 bebe:
   translation: bebé
   source: probablement del castellà
+bebo:
+  translation: truita
+  source: del castellà _huevo_
+  since: 08.07.2017
 Bett:
   traslation: llit
   source: de l'alemany
@@ -60,7 +71,7 @@ bibi:
 Bot: Berndt das Brot
 bote:
   translation: barca
-  source: del castellà "bote" i de l'alemany "Boot"
+  source: del castellà _bote_ i de l'alemany _Boot_
 daixa: gràcies
 das:
   translation: això
@@ -117,10 +128,13 @@ nein:
 nen: nen
 nena: nena
 nina: gallina
+nomint:
+  translation: dormint
+  since: 08.07.2017
 no: no
 on, on:
   translation: (onomatopeia del porc)
-  source: del castellà "oink, oink"
+  source: del castellà _oink, oink_
 oixo:
   translation: ós
   source: del castellà _oso_
@@ -137,6 +151,9 @@ Papi: Papi
 patas: patates
 pato:
   synonym: papato
+  since: 05.2017
+Paua:
+  translation: Paula
   since: 05.2017
 pé: peu
 pío:
@@ -176,10 +193,11 @@ tede: televisió
 teta: teta
 tete: televisió
 teti: televisió
-teyi: televisió
+teyi:
+  - translation: televisió
+  - transltion: l'osset Teddy
 Tio: Teo
 tutus:
-  translation: xoc de caps ("coco")
   since: ~02.07.2017
 Txussi:
   translation: adéu
