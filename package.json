@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "nodemon server.js --exec babel-node server.js --presets es2015,stage-2",
-    "build": "nodemon gulpfile.js --exec babel-node gulpfile.js --presets es2015,stage-2",
+    "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
