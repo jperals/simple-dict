@@ -16,7 +16,6 @@ function handleRender (req, res) {
     // Read the dictionary id from the request, if provided
     const params = qs.parse(req.query)
     const dictId = params.dict
-
     // Send the rendered page back to the client
     res.send(renderFullPage({ dictId:dictId }))
 }

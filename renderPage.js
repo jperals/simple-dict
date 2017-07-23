@@ -36,4 +36,9 @@ function renderFullPage({ dictId }) {
     `
 }
 
+// Babel allows us to use this syntax with nodemon...
 export default renderFullPage
+
+// ... but we still need this to import from the gulpfile
+module.exports = renderFullPage
+

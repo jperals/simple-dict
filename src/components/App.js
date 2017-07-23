@@ -12,7 +12,7 @@ class DictionaryApp extends Component {
 
     render() {
         const dictId = this.context.store.getState().dictId
-        const dictPath = 'src/data/' + dictId + '.yaml'
+        const dictPath = 'data/dicts/' + dictId + '.yaml'
         const content = yaml.safeLoad(fs.readFileSync(dictPath))
         return (
             <ul>
@@ -26,4 +26,4 @@ class DictionaryApp extends Component {
     }
 }
 
-export default DictionaryApp
+module.exports = DictionaryApp

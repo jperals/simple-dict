@@ -17,10 +17,12 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "gulp": "^3.9.1",
     "nodemon": "^1.11.0"
   },
   "scripts": {
     "start": "nodemon server.js --exec babel-node server.js --presets es2015,stage-2",
+    "build": "nodemon gulpfile.js --exec babel-node gulpfile.js --presets es2015,stage-2",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
