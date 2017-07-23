@@ -75,10 +75,15 @@ bibi:
     source: probablement de l'alemany _Baby_ o del castellà _bebé_
   - biberó
 bitte:
-  transition: si us plau
+  translation: si us plau
   source: da l'alemany
   since: 07.2017
-Bot: Bernd das Brot
+Bot:
+  translation: Bernd das Brot
+  synonyms: But, Pót, Put
+But:
+  translation: Bernd das Brot
+  synonyms: Bot, Pót, Put
 bote:
   translation: barca
   source: del castellà _bote_ i de l'alemany _Boot_
@@ -88,6 +93,7 @@ das:
   source: de l'alemany
 dos: arròs
 Eis:
+  pronunciation: /ei̯s/
   translation: gelat
   source: de l'alemany
 Emma: Emma
@@ -140,6 +146,7 @@ nei:
   translation: no
   source: de l'alemany _nein_
 nein:
+  pronunciation: /naɪ̯n/
   translation: no
   source: de l'alemany _nein_
 nen: nen
@@ -156,10 +163,9 @@ oixo:
   translation: ós
   source: del castellà _oso_
 pan:
-  meanings:
-   - translation: pa
-     source: del castellà
-   - elefant
+  - translation: pa
+    source: del castellà
+  - elefant
 Papa: Papa
 papato:
   translation: sabata
@@ -202,13 +208,13 @@ pota:
   translation: boca
   since: ~14.06.2017
 Pót:
-  synonyms: Bot, Put
+  synonyms: Bot, But, Put
   translation: Bernd das Brot
 poto: foto
 Put:
   translation: Bernd das Brot
   since: 23.06.2017
-  synonyms: Bot, Pót
+  synonyms: Bot, But, Pót
 Sara:
   translation: Sara
   since: ~26.06.2017
@@ -216,10 +222,10 @@ sí:
   translation: sí
   since: 29.06.2017
 ta:
-  translation:
-    - això
-    - mira!
-  source: potser de l'alemany _das_ (això) o _da_ (allí)
+  - translation: això
+    source: potser de l'alemany _das_
+  - translation: mira!
+    source: potser de l'alemany _da_ (allí)
 tanne:
   translation: carn
   source: del castellà _carne_
@@ -245,8 +251,11 @@ Tita:
   translation: Kika (canal infantil)
   since: 07.2017
 tutus:
-  since: ~02.07.2017
-Txussi:
+  - translation: cop de cap ("coco")
+    since: ~02.07.2017
+  - translation: cu-cut!
+    since: ~02.07.2017
+txussi:
   translation: adéu
   source: de l'alemany _tschüss_
 uhà:
