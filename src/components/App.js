@@ -1,6 +1,7 @@
-import React, { Component, PropTypes } from 'react'
-import yaml from 'js-yaml'
 import fs from 'fs'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import yaml from 'js-yaml'
 
 class DictionaryApp extends Component {
     constructor(props) {
