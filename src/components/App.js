@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import yaml from 'js-yaml'
 import fs from 'fs'
 
@@ -6,8 +6,12 @@ class DictionaryApp extends Component {
     constructor(props) {
         super(props)
     }
+    static contextTypes = {
+        store: PropTypes.object.isRequired
+    }
     render() {
-        const dictPath = 'src/data/' + this.props.dict + '.yaml'
+        const dictId = this.context.store.getState().dictId
+        const dictPath = 'src/data/' + dictId + '.yaml'
         const content = yaml.safeLoad(fs.readFileSync(dictPath))
         return (
             <div>

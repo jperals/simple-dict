@@ -30,7 +30,7 @@ function handleRender (req, res) {
     // Render the component to a string
     const html = renderToString(
         <Provider store={store}>
-            <App dict={store.getState().dictId}/>
+            <App />
         </Provider>
     )
 
