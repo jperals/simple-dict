@@ -1,6 +1,7 @@
 import fs from 'fs'
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
+import Term from './term'
 import yaml from 'js-yaml'
 
 class DictionaryApp extends Component {
@@ -20,16 +21,12 @@ class DictionaryApp extends Component {
             <ul>
                 {
                     Object.keys(content).map(function (term, i) {
-                        return <li class="term" key={'term-' + i}>
-                            <h2>{term}</h2>
-                            <p>{content[term].translation}</p>
-                        </li>
+                        return <Term term={ term } termData={ content[term] } key={ 'term-' + i }/>
                     })
                 }
             </ul>
         )
     }
 }
-
 
 export default DictionaryApp
