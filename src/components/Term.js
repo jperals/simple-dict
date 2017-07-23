@@ -5,7 +5,7 @@ class Term extends Component {
     render() {
         const data = this.props.termData
         return (
-            <li class="term" id={this.props.term}>
+            <div className="term" id={this.props.term}>
                 <h2>
                     <a href={'#' + this.props.term}>
                         {this.props.term}
@@ -13,11 +13,11 @@ class Term extends Component {
                 </h2>
                 {
                     data.pronunciation &&
-                    <div class="pronunciation">{ data.pronunciation }</div>
+                    <div className="pronunciation">{ data.pronunciation }</div>
                 }
                 {
                     data instanceof Array ? (
-                        <ol class="translations">
+                        <ol className="translations">
                             {
                                 data.map(function (definition, i) {
                                     return (
@@ -35,7 +35,7 @@ class Term extends Component {
                 {
 
                 }
-            </li>
+            </div>
         )
     }
 }

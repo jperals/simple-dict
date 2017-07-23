@@ -4,7 +4,7 @@ class Definition extends Component {
     render() {
         const data = this.props.definition
         return (
-            <div class="definition">
+            <div className="definition">
                 { data instanceof Object ? (
                     data.translation
                 ) : (
