@@ -1,0 +1,10 @@
+.terms {
+  list-style: none;
+  .term {
+    h2 {
+      a:not(:hover) {
+        text-decoration: none;
+      }
+    }
+  }
+}

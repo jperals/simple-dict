@@ -28,6 +28,7 @@ function renderFullPage({ dictId }) {
             <head>
                 <title>Dictionary</title>
                 <link rel="icon" type="image/gif" href="data:image/gif;base64,R0lGODlhEAAQAIAAAAAAAAAAACH5BAkAAAEALAAAAAAQABAAAAIgjI+py+0PEQiT1lkNpppnz4HfdoEH2W1nCJRfBMfyfBQAOw==" />
+                <link rel="stylesheet" href="../static/css/styles.css"></link>
             </head>
             </body>
                 <div id="root">${html}</div>

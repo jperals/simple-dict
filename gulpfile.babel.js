@@ -2,11 +2,13 @@
 
 const fs = require('fs')
 const gulp = require('gulp')
+const sass = require('gulp-sass');
+const initServer = require('./server')
 const renderPage = require('./renderPage')
 
 const dictPath = './data/dicts'
 
-gulp.task('build', function () {
+gulp.task('react:build', function () {
     fs.readdir(dictPath, function(err, files) {
         if(err) {
             console.error(error)
@@ -39,3 +41,27 @@ gulp.task('build', function () {
         }
     })
 })
+
+gulp.task('react:serve', function () {
+    initServer()
+})
+
+
+gulp.task('sass:compile', function () {
+    return gulp.src('./src/sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./static/css'));
+})
+
+gulp.task('sass:build', function () {
+    return gulp.src('./src/sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./dist/static/css'));
+})
+
+gulp.task('sass:watch', function () {
+    gulp.watch('./src/sass/**/*.scss', ['sass:compile'])
+})
+
+gulp.task('build', ['sass:build', 'react:build'])
+gulp.task('serve', ['sass:compile', 'sass:watch', 'react:serve'])

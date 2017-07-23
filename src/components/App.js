@@ -15,10 +15,14 @@ class DictionaryApp extends Component {
         const dictPath = 'data/dicts/' + dictId + '.yaml'
         const content = yaml.safeLoad(fs.readFileSync(dictPath))
         return (
-            <ul>
+            <ul className="terms">
                 {
                     Object.keys(content).map(function (term, i) {
-                        return <Term term={ term } termData={ content[term] } key={ 'term-' + i }/>
+                        return (
+                            <li key={ 'term-' + i }>
+                                <Term term={ term } termData={ content[term] } />
+                            </li>
+                        )
                     })
                 }
             </ul>
