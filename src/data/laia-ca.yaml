@@ -47,6 +47,9 @@ baio:
 Ball:
   translation: pilota
   source: de l'alemany
+balol:
+  translation: cargol
+  since: 23.07.2017
 Bassa:
   translation: aigua
   source: de l'alemany _Wasser_
@@ -174,6 +177,9 @@ peces:
   translation: peixos
   since: 07.2017
   source: del castellà
+pet:
+  translation: pitet
+  since: 22.07.2017
 pío:
   translation: piu (onomatopeia de l'ocell)
   source: del castellà
@@ -192,11 +198,14 @@ pos!:
 pota:
   translation: boca
   since: ~14.06.2017
-Pót: Berndt das Brot
+Pót:
+  synonyms: Bot, Put
+  translation: Bernd das Brot
 poto: foto
 Put:
-  translation: Berndt das Brot
+  translation: Bernd das Brot
   since: 23.06.2017
+  synonyms: Bot, Pót
 Sara:
   translation: Sara
   since: ~26.06.2017
@@ -217,7 +226,12 @@ té: té (imperatiu)
 ten: tren
 Teo: Teo
 tede: televisió
-teta: teta
+teta:
+  - teta
+  - translation: galeta
+    since: 07.2017
+  - translation: lleteta
+    since: 07.2017
 tete: televisió
 teti: televisió
 teyi:
@@ -232,7 +246,7 @@ tutus:
 Txussi:
   translation: adéu
   source: de l'alemany _tschüss_
-uà:
+uhà:
   translation: jugar
   since: 07.2017
 vai: cavall
