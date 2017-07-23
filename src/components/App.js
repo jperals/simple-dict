@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import yaml from 'js-yaml'
 import fs from 'fs'
 
-const content = yaml.safeLoad(fs.readFileSync('src/data/laia-ca.yaml'))
 class DictionaryApp extends Component {
     constructor(props) {
         super(props)
     }
     render() {
+        const dictPath = 'src/data/' + this.props.dict + '.yaml'
+        const content = yaml.safeLoad(fs.readFileSync(dictPath))
         return (
             <div>
                 {
