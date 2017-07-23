@@ -18,7 +18,7 @@ class DictionaryApp extends Component {
             <div>
                 {
                     Object.keys(content).map(function(key, i) {
-                        return <div class="word"><h2>{key}</h2><p>{content[key].translation}</p></div>
+                        return <div class="word" key={key}><h2>{key}</h2><p>{content[key].translation}</p></div>
                     })
                 }
             </div>
