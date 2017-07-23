@@ -5,8 +5,12 @@ class Term extends Component {
     render() {
         const data = this.props.termData
         return (
-            <li class="term">
-                <h2>{this.props.term}</h2>
+            <li class="term" id={this.props.term}>
+                <h2>
+                    <a href={'#' + this.props.term}>
+                        {this.props.term}
+                    </a>
+                </h2>
                 {
                     data.pronunciation &&
                     <div class="pronunciation">{ data.pronunciation }</div>
