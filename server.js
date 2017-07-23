@@ -22,26 +22,27 @@ function handleRender (req, res) {
     const params = qs.parse(req.query)
     const dictId = params.dict
 
+    // Send the rendered page back to the client
+    res.send(renderFullPage({ dictId:dictId }))
+}
+
+function renderApp({ dictId }) {
     let preloadedState = { dictId }
 
     // Create a new Redux store instance
     const store = createStore(mainReducer, preloadedState)
 
     // Render the component to a string
-    const html = renderToString(
+    return renderToString(
         <Provider store={store}>
             <App />
         </Provider>
     )
 
-    // Grab the initial state from out Redux store
-    const finalState = store.getState()
-
-    // Send the rendered page back to the client
-    res.send(renderFullPage(html, finalState))
 }
 
-function renderFullPage(html, state) {
+function renderFullPage({ dictId }) {
+    const html = renderApp({ dictId })
     return `
         <!doctype html>
         <html>
