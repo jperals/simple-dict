@@ -5,9 +5,6 @@ import Term from './term'
 import yaml from 'js-yaml'
 
 class DictionaryApp extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     static contextTypes = {
         store: PropTypes.object.isRequired
