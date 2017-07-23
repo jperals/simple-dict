@@ -1,0 +1,39 @@
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import React from 'react'
+import { renderToString } from 'react-dom/server'
+import App from './src/components/App'
+import mainReducer from './src/reducers/index'
+
+function renderApp({ dictId }) {
+    let preloadedState = { dictId }
+
+    // Create a new Redux store instance
+    const store = createStore(mainReducer, preloadedState)
+
+    // Render the component to a string
+    return renderToString(
+        <Provider store={store}>
+            <App />
+        </Provider>
+    )
+
+}
+
+function renderFullPage({ dictId }) {
+    const html = renderApp({ dictId })
+    return `
+        <!doctype html>
+        <html>
+            <head>
+                <title>Dictionary</title>
+                <link rel="icon" type="image/gif" href="data:image/gif;base64,R0lGODlhEAAQAIAAAAAAAAAAACH5BAkAAAEALAAAAAAQABAAAAIgjI+py+0PEQiT1lkNpppnz4HfdoEH2W1nCJRfBMfyfBQAOw==" />
+            </head>
+            </body>
+                <div id="root">${html}</div>
+            </body>
+        </html>
+    `
+}
+
+export default renderFullPage
