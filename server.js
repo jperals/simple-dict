@@ -47,6 +47,7 @@ function renderFullPage(html, state) {
         <html>
             <head>
                 <title>Dictionary</title>
+                <link rel="icon" type="image/gif" href="data:image/gif;base64,R0lGODlhEAAQAIAAAAAAAAAAACH5BAkAAAEALAAAAAAQABAAAAIgjI+py+0PEQiT1lkNpppnz4HfdoEH2W1nCJRfBMfyfBQAOw==" />
             </head>
             </body>
                 <div id="root">${html}</div>
