@@ -2,6 +2,7 @@
 // http://redux.js.org/docs/recipes/ServerRendering.html
 
 import Express from 'express'
+import livereload from 'connect-livereload'
 import qs from 'qs'
 import renderFullPage from './renderPage'
 
@@ -9,7 +10,7 @@ const app = Express()
 const port = 3000
 
 app.use('/css', Express.static('./dist/css'))
-
+app.use(livereload())
 app.use(handleRender)
 
 function handleRender(req, res) {

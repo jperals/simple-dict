@@ -5,9 +5,11 @@ const fs = require('fs')
 const gulp = require('gulp')
 const babel = require('gulp-babel')
 const Cache = require('gulp-file-cache')
-const sass = require('gulp-sass')
+const livereload = require('gulp-livereload')
 const nodemon = require('gulp-nodemon')
+const notify = require('gulp-notify')
 const renderPage = require('./src/renderPage')
+const sass = require('gulp-sass')
 
 const dictPath = './data/dicts'
 
@@ -57,11 +59,16 @@ gulp.task('app:compile', function () {
 })
 
 gulp.task('app:serve', ['app:compile'], function () {
+    livereload.listen()
     const stream = nodemon({
         script: 'dist/server.js',
         watch: 'src',
         ext: 'js scss',
         tasks: ['app:compile']
+    }).on('restart', function(){
+        gulp.src('dist/server.js')
+            .pipe(livereload())
+            .pipe(notify('Reloading page, please wait...'));
     })
     return stream
 })
