@@ -1,19 +1,26 @@
+import MarkdownIt from 'markdown-it'
 import React, {Component} from 'react'
 import Definition from './Definition'
+
+const md = new MarkdownIt()
 
 class Term extends Component {
     render() {
         const data = this.props.termData
         return (
             <div className="term" id={this.props.term}>
-                <h2>
+                <span className="written-form">
                     <a href={'#' + this.props.term}>
                         {this.props.term}
                     </a>
-                </h2>
+                </span>
                 {
                     data.pronunciation &&
-                    <div className="pronunciation">{ data.pronunciation }</div>
+                    <span className="pronunciation">{ data.pronunciation }</span>
+                }
+                {
+                    data.source &&
+                    <div className="source" dangerouslySetInnerHTML={ { __html: md.renderInline(data.source) } } />
                 }
                 {
                     data instanceof Array ? (
