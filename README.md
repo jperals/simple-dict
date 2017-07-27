@@ -19,7 +19,7 @@ Just run
 ```
 gulp serve
 ```
-then visit e.g. `localhost:3000?dict=laia-ca`, where the `dict` query parameter refers to the dictionary in `data/laia-ca.yaml`. The Express server will reload automatically on changes. (The browser won't, yet)
+then visit e.g. `localhost:3000?dict=laia-ca`, where the `dict` query parameter refers to the dictionary in `data/laia-ca.yaml`. But the server and the browser will reload automatically on changes.
 
 ### Genereate a build
 
