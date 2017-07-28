@@ -5,6 +5,7 @@ const fs = require('fs')
 const gulp = require('gulp')
 const babel = require('gulp-babel')
 const Cache = require('gulp-file-cache')
+const ghpages = require('gh-pages');
 const livereload = require('gulp-livereload')
 const nodemon = require('gulp-nodemon')
 const notify = require('gulp-notify')
@@ -97,6 +98,13 @@ gulp.task('clean:app', function () {
 gulp.task('clean:static', function () {
     return del(['static/**', '!static'])
 })
+
+gulp.task('publish', function () {
+    return ghpages.publish('static', function(err) {
+        console.error(err)
+    })
+})
+
 
 gulp.task('clean', ['clean:app', 'clean:static'])
 gulp.task('build', ['clean:static', 'sass:build', 'static:build'])
