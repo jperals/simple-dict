@@ -99,7 +99,7 @@ gulp.task('clean:static', function () {
     return del(['static/**', '!static'])
 })
 
-gulp.task('publish', function () {
+gulp.task('gh-pages', function () {
     return ghpages.publish('static', function(err) {
         console.error(err)
     })
@@ -109,3 +109,4 @@ gulp.task('publish', function () {
 gulp.task('clean', ['clean:app', 'clean:static'])
 gulp.task('build', ['clean:static', 'sass:build', 'static:build'])
 gulp.task('serve', ['clean:app', 'sass:compile', 'sass:watch', 'app:serve'])
+gulp.task('publish', ['build', 'gh-pages'])
