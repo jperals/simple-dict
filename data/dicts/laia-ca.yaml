@@ -173,6 +173,7 @@ papato:
 Papi: Papi
 patas: patates
 pato:
+  source: del castellà _zapato_
   synonym: papato
   since: 05.2017
 Paua:
@@ -194,9 +195,9 @@ pío:
   source: del castellà
 pita:
   - translation: pica
-  - since: 23.06.2017
+    since: 23.06.2017
   - translation: porta?
-  - since: 05.2017
+    since: 05.2017
 poio:
   translation: pollastre
   source: del castellà
