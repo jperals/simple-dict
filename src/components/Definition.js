@@ -6,9 +6,10 @@ const md = new MarkdownIt()
 class Definition extends Component {
     render() {
         const data = this.props.definition
-        return (
-            <div className="definition" dangerouslySetInnerHTML={createMarkup(data)} />
-        )
+        const markup = createMarkup(data)
+        return markup ? (
+            <div className="definition" dangerouslySetInnerHTML={markup} />
+        ) : ''
     }
 }
 

@@ -19,10 +19,6 @@ class Term extends Component {
                     <span className="pronunciation">{ data.pronunciation }</span>
                 }
                 {
-                    data.source &&
-                    <div className="source" dangerouslySetInnerHTML={ { __html: md.renderInline(data.source) } } />
-                }
-                {
                     data instanceof Array ? (
                         <ol className="translations">
                             {
@@ -40,7 +36,17 @@ class Term extends Component {
                     )
                 }
                 {
-
+                    data.source &&
+                    <div className="source" dangerouslySetInnerHTML={ {__html: md.renderInline(data.source)} }/>
+                }
+                {
+                    data.since &&
+                    <div className="since">afegit: { data.since }</div>
+                }
+                {
+                    data.synonyms instanceof Array && (
+                        <div className="synonyms">Sinònims: { data.synonyms.join(', ') }</div>
+                    )
                 }
             </div>
         )
