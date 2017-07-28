@@ -10,6 +10,7 @@
       a {
         color: darkturquoise;
         font-size: 175%;
+        font-weight: bold;
         &:not(:hover) {
           text-decoration: none;
         }
@@ -19,12 +20,17 @@
       color: lightgray;
       margin-left: .5rem;
     }
-    .source {
+    .source,
+    .since,
+    .synonyms,
+    .synonyms a {
       color: darkgray;
+      fint-size: 80%;
     }
     .definition {
       font-size: 150%;
       margin-top: .25rem;
+      margin-bottom: .25rem;
     }
   }
 }
