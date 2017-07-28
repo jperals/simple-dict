@@ -1,4 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300i,400");
+body {
+  font-family: 'Open Sans', sans-serif; }
+
 .terms {
-  list-style: none; }
-  .terms .term h2 a:not(:hover) {
-    text-decoration: none; }
+  color: gray;
+  list-style: none;
+  padding-left: 0; }
+  .terms .term {
+    margin-bottom: 2rem; }
+    .terms .term .written-form a {
+      color: darkturquoise;
+      font-size: 175%;
+      font-weight: bold; }
+      .terms .term .written-form a:not(:hover) {
+        text-decoration: none; }
+    .terms .term .pronunciation {
+      color: lightgray;
+      margin-left: .5rem; }
+    .terms .term .source,
+    .terms .term .since,
+    .terms .term .synonyms,
+    .terms .term .synonyms a {
+      color: darkgray;
+      fint-size: 80%; }
+    .terms .term .definition {
+      font-size: 150%;
+      margin-top: .25rem;
+      margin-bottom: .25rem; }
