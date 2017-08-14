@@ -10,16 +10,28 @@ aió:
   translation: hola
   source: de l'alemany _hallo_
   pronunciation: /ˈa.ʝo/
-apa!: apa!
-ata!: salta!
+apa!:
+  pronunciation: /ˈa.pa/
+  translation: apa!
+  source: del català
+  since: 2017
+ata!:
+  translation: salta!
+  pronunciation: /ˈa.ta/
+  source: del català
+  since: 2017
 ati:
+  pronunciation: /ˈa.ti/
   translation: Atxís!
-  date: 12.05.2017
-atí: aquí
+  since: 12.05.2017
+atí:
+  pronunciation: /ˈa.ti/
+  translation: aquí
 ato:
-  translation: vehicle
+  translation: vehicle terrestre
   source: de l'alemany _Auto_ (cotxe)
   notes: '_Auto_ en alemany significa cotxe, però _Ato_ pot referir-se a pràcticament qualsevol vehicle: cotxes, motos, cotxets, bicicletes, barques...'
+  synonyms: auto
 aua:
   translation: aigua
 aua!:
@@ -50,6 +62,10 @@ Ball:
 balol:
   translation: cargol
   since: 23.07.2017
+bato:
+  translation: barca
+  source: del castellà _barco_
+  since: 13.08.2017
 Bassa:
   translation: aigua
   source: de l'alemany _Wasser_
@@ -74,9 +90,16 @@ bibi:
   - translation: nadó
     source: probablement de l'alemany _Baby_ o del castellà _bebé_
   - biberó
+bibo:
+  translation: llibre
+  source: del castellà _libro_
+  since: 08.2017
 bitte:
   translation: si us plau
   source: da l'alemany
+  since: 07.2017
+bó:
+  translation: sabó
   since: 07.2017
 Bot:
   translation: Bernd das Brot
@@ -103,7 +126,18 @@ essen:
   since: ~20.07.2017
 foto: foto
 Iaia: Laia
+iuixen:
+  translation: vull baixar pel tobogan
+  since: 08.2017
+  source: de l'alemany _rutschen_
+  synonyms: uixen
+  pronunciation: /juˈʃen/
 Laia: Laia
+lata:
+  translation: cullera
+  since: 13.08.2017
+  source: del castellà _cuchara_
+  pronunciation: /'la.ta/
 mà: mà
 má:
   translation: més
@@ -222,6 +256,13 @@ Sara:
 sí:
   translation: sí
   since: 29.06.2017
+sola:
+  - translation: jo sola
+    since: 13.08.2017
+    pronunciation: /ˈsɔ.ɫa/
+  - translation: ajuda'm
+    since: 13.08.2017
+    pronunciation: /ˈsɔ.ɫa/
 ta:
   - translation: això
     source: potser de l'alemany _das_
@@ -262,6 +303,12 @@ txussi:
 uhà:
   translation: jugar
   since: 07.2017
+uixen:
+  translation: vull baixar pel tobogan
+  since: 08.2017
+  source: de l'alemany _rutschen_
+  synonyms: iuixen
+  pronunciation: /uˈʃen/
 vai: cavall
 vale:
   translation: d'acord
@@ -269,4 +316,8 @@ vale:
 vaso:
   translation: got
   source: del castellà
+xabo:
+  translation: dinosaure (no aviari)
+  source: del castellà "dinosaurio"
+  since: 08.2017
 xaixa: gràcies
