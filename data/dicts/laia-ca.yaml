@@ -10,6 +10,10 @@ aió:
   translation: hola
   source: de l'alemany _hallo_
   pronunciation: /ˈa.ʝo/
+Allen:
+  translation: ulls
+  since: 26.08.2018
+  source: de l'alemany _Augen_
 apa!:
   pronunciation: /ˈa.pa/
   translation: apa!
@@ -41,6 +45,7 @@ auó:
   translation: hola
   source: de l'alemany _hallo_
   notes: sovint utilitzat per referir-se a la cançó _Hallo, hallo, schön, dass du da bist_
+  until: 27.08.2017
 avi: avi
 babau:
   translation: gos
@@ -124,7 +129,18 @@ essen:
   translation: menjar
   source: de l'alemany
   since: ~20.07.2017
+fola!:
+  translation: fora!
+  since: 08.2017
+  synonyms: fula!
 foto: foto
+fula!:
+  since: 08.2017
+  synonyms: fola!
+hallo:
+  translation: hola
+  since: 26.08.2017
+  source: de l'alemany
 Iaia: Laia
 iuixen:
   translation: vull baixar pel tobogan
@@ -138,6 +154,10 @@ lata:
   since: 13.08.2017
   source: del castellà _cuchara_
   pronunciation: /'la.ta/
+lolo:
+  translation: barret
+  since: 08.2017
+  source: del castellà _gorro_
 mà: mà
 má:
   translation: més
@@ -169,6 +189,10 @@ motos:
   translation: mocs
   source: probablement del castellà _mocos_
   since: ~11.06.2017
+Mut:
+  translation: boca
+  since: 26.08.2017
+  source: de l'alemany _Mund_
 muta:
  translation: música
  since: 23.06.2017
@@ -176,6 +200,10 @@ nana:
   translation: plàtan
   source: de l'alemany _Banane_
 nas: nas
+Nasse:
+  translation: nas
+  since: 26.08.2017
+  source: de l'alemany _Nase_
 nei:
   translation: no
   source: de l'alemany _nein_
@@ -218,6 +246,10 @@ peces:
   translation: peixos
   since: 07.2017
   source: del castellà
+pelos:
+  translation: pèls
+  since: 27.08.2017
+  source: del castellà
 pet:
   translation: pitet
   since: 22.07.2017
@@ -227,11 +259,18 @@ Pimi:
 pío:
   translation: piu (onomatopeia de l'ocell)
   source: del castellà
+Pit:
+  translation: Peppa Pig
+  since: 26.08.2017
 pita:
   - translation: pica
     since: 23.06.2017
   - translation: porta?
     since: 05.2017
+pono:
+  translation: em vull posar això
+  since: 08.2017
+  source: del castellà _¿te lo pongo?_
 poio:
   translation: pollastre
   source: del castellà
@@ -246,6 +285,9 @@ Pót:
   synonyms: Bot, But, Put
   translation: Bernd das Brot
 poto: foto
+puma:
+  translation: poma
+  since: 26.08.2017
 Put:
   translation: Bernd das Brot
   since: 23.06.2017
@@ -273,14 +315,22 @@ tanne:
   source: del castellà _carne_
   since: 21.07.2017
 tata: caca
+tatu:
+  translation: quètxup
+  since: 19.08.2017
+Tavi:
+  translation: Xavi
+  since: 08.2017
 té: té (imperatiu)
+tede: televisió
 ten: tren
 Teo: Teo
-tede: televisió
 teta:
   - teta
   - translation: galeta
     since: 07.2017
+  - translation: jaqueta
+    since: 08.2017
   - translation: lleteta
     since: 07.2017
 tete: televisió
