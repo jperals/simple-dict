@@ -104,6 +104,10 @@ essen:
 foto: foto
 Iaia: Laia
 Laia: Laia
+lolo:
+  translation: barret
+  source: del castellà _gorro_
+  since: 08.2017
 mà: mà
 má:
   translation: més
@@ -238,6 +242,8 @@ Teo: Teo
 tede: televisió
 teta:
   - teta
+  - translation: jaqueta
+    since: 08.2017
   - translation: galeta
     since: 07.2017
   - translation: lleteta
@@ -251,6 +257,9 @@ Tio: Teo
 Tita:
   translation: Kika (canal infantil)
   since: 07.2017
+tul:
+  translation: cul
+  since: 31.08.2017
 tutus:
   - translation: cop de cap ("coco")
     since: ~02.07.2017
