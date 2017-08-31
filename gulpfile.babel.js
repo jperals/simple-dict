@@ -10,6 +10,7 @@ const livereload = require('gulp-livereload')
 const nodemon = require('gulp-nodemon')
 const notify = require('gulp-notify')
 const renderPage = require('./src/renderPage')
+const runSequence = require('run-sequence')
 const sass = require('gulp-sass')
 
 const dictPath = './data/dicts'
@@ -107,6 +108,15 @@ gulp.task('gh-pages', function () {
 
 
 gulp.task('clean', ['clean:app', 'clean:static'])
-gulp.task('build', ['clean:static', 'sass:build', 'static:build'])
-gulp.task('serve', ['clean:app', 'sass:compile', 'sass:watch', 'app:serve'])
-gulp.task('publish', ['build', 'gh-pages'])
+
+gulp.task('build', function(callback) {
+    runSequence('clean:static', ['sass:build', 'static:build'], callback)
+})
+
+gulp.task('serve', function(callback) {
+    runSequence('clean:app', 'sass:compile', 'sass:watch', 'app:serve')
+})
+
+gulp.task('publish', function(callback) {
+    runSequence('build', 'gh-pages', callback)
+})
