@@ -17,7 +17,7 @@ const dictPath = './data/dicts'
 
 const cache = new Cache()
 
-gulp.task('static:build', function () {
+gulp.task('static:build', function (callback) {
     fs.readdir(dictPath, function (err, files) {
         if (err) {
             console.error(error)
@@ -41,6 +41,9 @@ gulp.task('static:build', function () {
                                 }
                                 else {
                                     console.log('Done!')
+                                    if(typeof callback === "function") {
+                                        callback()
+                                    }
                                 }
                             })
                         })
@@ -105,7 +108,6 @@ gulp.task('gh-pages', function () {
         console.error(err)
     })
 })
-
 
 gulp.task('clean', ['clean:app', 'clean:static'])
 
