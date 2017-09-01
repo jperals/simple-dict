@@ -114,7 +114,7 @@ gulp.task('build', function(callback) {
 })
 
 gulp.task('serve', function(callback) {
-    runSequence('clean:app', 'sass:compile', 'sass:watch', 'app:serve')
+    runSequence('clean:app', 'sass:compile', 'sass:watch', 'app:serve', callback)
 })
 
 gulp.task('publish', function(callback) {
