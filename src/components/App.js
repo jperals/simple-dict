@@ -1,8 +1,6 @@
-import fs from 'fs'
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Term from './term'
-import yaml from 'js-yaml'
 
 class DictionaryApp extends Component {
 
@@ -12,8 +10,7 @@ class DictionaryApp extends Component {
 
     render() {
         const dictId = this.context.store.getState().dictId
-        const dictPath = 'data/dicts/' + dictId + '.yaml'
-        const content = yaml.safeLoad(fs.readFileSync(dictPath))
+        const content = this.context.store.getState().dictContent
         return (
             <ul className="terms">
                 {

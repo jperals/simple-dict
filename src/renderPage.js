@@ -5,8 +5,8 @@ import { renderToString } from 'react-dom/server'
 import App from './components/App'
 import mainReducer from './reducers/index'
 
-function renderApp({ dictId }) {
-    let preloadedState = { dictId }
+function renderApp({ dictId, dictContent }) {
+    let preloadedState = { dictId, dictContent }
 
     // Create a new Redux store instance
     const store = createStore(mainReducer, preloadedState)
@@ -34,7 +34,8 @@ function renderFullPage(state) {
                   // http://redux.js.org/docs/recipes/ServerRendering.html#security-considerations
                   window.__PRELOADED_STATE__ = ${JSON.stringify(state).replace(/</g, '\\u003c')}
                 </script>
-                <script src="client.js"></script>
+                <script src="static/vendor.js"></script>
+                <script defer src="static/client.js"></script>
             </head>
             </body>
                 <div id="root">${html}</div>
