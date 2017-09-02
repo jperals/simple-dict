@@ -13,6 +13,7 @@ const port = 3000
 
 app.use('/css', Express.static('./dist/css'))
 app.use('/static', Express.static('./static'))
+app.use('/data', Express.static('./data'))
 app.use(livereload())
 app.use(handleRender)
 

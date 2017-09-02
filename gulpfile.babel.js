@@ -2,6 +2,7 @@
 
 const babel = require('gulp-babel')
 const browserify = require('browserify')
+const buffer = require('vinyl-buffer')
 const Cache = require('gulp-file-cache')
 const del = require('del')
 const fs = require('fs')
@@ -13,12 +14,13 @@ const notify = require('gulp-notify')
 const runSequence = require('run-sequence')
 const sass = require('gulp-sass')
 const source = require('vinyl-source-stream')
-import yaml from 'js-yaml'
+const sourcemaps  = require('gulp-sourcemaps')
 
 const renderPage = require('./src/renderPage')
 
 const dictPath = './data/dicts'
 const thirdPartyPackages = [
+    'js-yaml',
     'react',
     'react-dom',
     'redux',
@@ -76,13 +78,13 @@ gulp.task('app:compile', function () {
 })
 
 // Start a serve that serves files from `dist` and will reload on source changes
-gulp.task('app:serve', ['app:compile'], function () {
+gulp.task('app:serve', ['app:compile', 'client'], function () {
     livereload.listen()
     const stream = nodemon({
         script: 'dist/server.js',
         watch: 'src',
         ext: 'js scss',
-        tasks: ['app:compile']
+        tasks: ['app:compile', 'client']
     }).on('restart', function(){
         gulp.src('dist/server.js')
             .pipe(livereload())
@@ -155,6 +157,9 @@ gulp.task('client', function () {
     // .pipe(minify())
     // .pipe(argv.production ? minify() : gutil.noop())
     .pipe(source('client.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true, debug: true}))
+    .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest('./static'))
     .pipe(livereload())
 })
@@ -166,7 +171,7 @@ gulp.task('build', function(callback) {
 })
 
 gulp.task('serve', function(callback) {
-    runSequence('clean:app', 'sass:compile', 'sass:watch', ['vendor', 'client'], 'app:serve', callback)
+    runSequence('clean:app', 'sass:compile', 'sass:watch', 'vendor', 'app:serve', callback)
 })
 
 gulp.task('publish', function(callback) {
