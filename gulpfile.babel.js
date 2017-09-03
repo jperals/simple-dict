@@ -18,8 +18,10 @@ const sourcemaps  = require('gulp-sourcemaps')
 
 const renderPage = require('./src/renderPage')
 
+const serverDir = './build/server'
+const staticDir = './build/static'
 const dictPath = './data/dicts'
-const thirdPartyPackages = [
+const vendorPackages = [
     'js-yaml',
     'react',
     'react-dom',
@@ -28,6 +30,94 @@ const thirdPartyPackages = [
 ]
 
 const cache = new Cache()
+
+// Remove all content inside `dist`, but the `dist` directory itself
+gulp.task('server:clean', function () {
+    return del([serverDir + '/**', '!' + serverDir ])
+})
+
+// Generate a build to be served via Express
+gulp.task('server:build', function () {
+    const stream = gulp.src('./src/**/*.js')
+        .pipe(babel({
+            "presets": ["react", "es2015", "stage-2"]
+        }))
+        .pipe(gulp.dest(serverDir))
+    return stream
+})
+
+// Start a server that serves files from `dist` and will reload on source changes
+gulp.task('server:serve', ['server:build', 'server:client'], function () {
+    livereload.listen()
+    const stream = nodemon({
+        script: serverDir + '/server.js',
+        watch: 'src',
+        ext: 'js scss',
+        tasks: ['server:clean', 'server:build', 'server:client']
+    }).on('restart', function(){
+        gulp.src(serverDir + '/server.js')
+            .pipe(livereload())
+            .pipe(notify('Reloading page, please wait...'));
+    })
+    return stream
+})
+
+// Generate css files for the server build
+gulp.task('server:sass', function () {
+    return gulp.src('./src/sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest(serverDir + '/static/css'));
+})
+
+// Watch for changes in scss files, to compile again
+gulp.task('server:sass-watch', function () {
+    gulp.watch('./src/sass/**/*.scss', ['server:sass'])
+})
+
+gulp.task('server:data', function () {
+    return gulp.src('./data/**')
+        .pipe(gulp.dest(serverDir + '/data'))
+})
+
+gulp.task('server:vendor', function () {
+    return browserify()
+        .require(vendorPackages)
+        .bundle()
+        .on('error', function(err){
+            console.error(err)
+        })
+        // .pipe(buffer())
+        // .pipe(minify())
+        // .pipe(argv.production ? minify() : gutil.noop())
+        .pipe(source('vendor.js'))
+        .pipe(gulp.dest(serverDir + '/static'));
+});
+
+gulp.task('server:client', function () {
+    const compiled = browserify('src/client.js')
+        .transform("babelify", {presets: ["react", "es2015", "stage-2"]})
+    vendorPackages.forEach(function (id) {
+        compiled.external(id)
+    })
+    return compiled.bundle()
+        .on('error', function(err){
+            console.error(err);
+        })
+        // .pipe(buffer())
+        // .pipe(minify())
+        // .pipe(argv.production ? minify() : gutil.noop())
+        .pipe(source('client.js'))
+        .pipe(buffer())
+        .pipe(sourcemaps.init({loadMaps: true, debug: true}))
+        .pipe(sourcemaps.write("./"))
+        .pipe(gulp.dest(serverDir + '/static'))
+        .pipe(livereload())
+})
+
+// Remove all content inside `static`, but the `static` directory itself
+gulp.task('static:clean', function () {
+    return del([staticDir + '/**', '!static'])
+})
 
 // Generate a static build in the `static` directory
 gulp.task('static:build', function (callback) {
@@ -43,12 +133,12 @@ gulp.task('static:build', function (callback) {
                     return
                 }
                 if (!stats.isDirectory()) {
-                    fs.mkdir('static', function () {
+                    fs.mkdir(staticDir, function () {
                         const dictId = file.split('.')[0]
                         console.log('Building dictionary:', dictId)
-                        fs.mkdir('static/' + dictId, function () {
+                        fs.mkdir(staticDir + '/' + dictId, function () {
                             const html = renderPage({dictId})
-                            return fs.writeFile('static/' + dictId + '/index.html', html, function (err) {
+                            return fs.writeFile(staticDir + '/' + dictId + '/index.html', html, function (err) {
                                 if (err) {
                                     console.error(err)
                                 }
@@ -67,113 +157,32 @@ gulp.task('static:build', function (callback) {
     })
 })
 
-// Generate a build to be served via Express in the `dist` directory
-gulp.task('app:compile', function () {
-    const stream = gulp.src('./src/**/*.js')
-        .pipe(babel({
-            "presets": ["react", "es2015", "stage-2"]
-        }))
-        .pipe(gulp.dest('./dist'))
-    return stream
-})
-
-// Start a serve that serves files from `dist` and will reload on source changes
-gulp.task('app:serve', ['app:compile', 'client'], function () {
-    livereload.listen()
-    const stream = nodemon({
-        script: 'dist/server.js',
-        watch: 'src',
-        ext: 'js scss',
-        tasks: ['app:compile', 'client']
-    }).on('restart', function(){
-        gulp.src('dist/server.js')
-            .pipe(livereload())
-            .pipe(notify('Reloading page, please wait...'));
-    })
-    return stream
-})
-
-// Generate css files under `static`
-gulp.task('sass:build', function () {
+// Generate css files for the static build
+gulp.task('static:sass', function () {
     return gulp.src('./src/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./static/css'));
 })
 
-// Generate css files under `dist`
-gulp.task('sass:compile', function () {
-    return gulp.src('./src/sass/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./dist/css'));
-})
-
-// Watch for changes in scss files, to compile again
-gulp.task('sass:watch', function () {
-    gulp.watch('./src/sass/**/*.scss', ['sass:compile'])
-})
-
-// Remove all content inside `dist`, but the `dist` directory itself
-gulp.task('clean:app', function () {
-    return del(['dist/**', '!dist'])
-})
-
-// Remove all content inside `static`, but the `static` directory itself
-gulp.task('clean:static', function () {
-    return del(['static/**', '!static'])
-})
-
 // Publish to Github
 gulp.task('gh-pages', function () {
-    return ghpages.publish('static', function(err) {
+    return ghpages.publish(staticDir, function(err) {
         console.error(err)
     })
 })
 
-gulp.task('vendor', function () {
-    return browserify()
-        .require(thirdPartyPackages)
-        .bundle()
-        .on('error', function(err){
-            console.error(err)
-        })
-        // .pipe(buffer())
-        // .pipe(minify())
-        // .pipe(argv.production ? minify() : gutil.noop())
-        .pipe(source('vendor.js'))
-        .pipe(gulp.dest('./static'));
-});
-
-gulp.task('client', function () {
-    const compiled = browserify('src/client.js')
-        .transform("babelify", {presets: ["react", "es2015", "stage-2"]})
-    thirdPartyPackages.forEach(function (id) {
-        compiled.external(id)
-    })
-    return compiled.bundle()
-    .on('error', function(err){
-        console.error(err);
-    })
-    // .pipe(buffer())
-    // .pipe(minify())
-    // .pipe(argv.production ? minify() : gutil.noop())
-    .pipe(source('client.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true, debug: true}))
-    .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest('./static'))
-    .pipe(livereload())
-})
-
-gulp.task('clean', ['clean:app', 'clean:static'])
+gulp.task('clean', ['server:clean', 'static:clean'])
 
 gulp.task('build', function(callback) {
-    runSequence('clean:static', ['sass:build', 'static:build'], callback)
+    runSequence('static:clean', ['sass:build', 'static:build'], callback)
 })
 
 gulp.task('serve', function(callback) {
-    runSequence('clean:app', 'sass:compile', 'sass:watch', 'vendor', 'app:serve', callback)
+    runSequence('server:clean', 'server:sass', 'server:sass-watch', ['server:data', 'server:vendor'], 'server:serve', callback)
 })
 
 gulp.task('publish', function(callback) {
     runSequence('build', 'gh-pages', callback)
 })
+
+gulp.task('default', ['serve'])
