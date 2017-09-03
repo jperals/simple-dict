@@ -2,8 +2,8 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
-import App from './components/App'
-import mainReducer from './reducers/index'
+import App from './app/components/App'
+import mainReducer from './app/reducers/index'
 
 function renderApp({ dictId, dictContent }) {
     let preloadedState = { dictId, dictContent }
@@ -49,4 +49,3 @@ export default renderFullPage
 
 // ... but we still need this to import from the gulpfile
 module.exports = renderFullPage
-

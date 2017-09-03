@@ -2,8 +2,8 @@ import React from 'react'
 import { render } from 'react-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import App from './components/App'
-import rootReducer from './reducers'
+import App from './app/components/App'
+import rootReducer from './app/reducers'
 import yaml from 'js-yaml'
 
 // Grab the state from a global variable injected into the server-generated HTML
@@ -33,6 +33,5 @@ fetch(dictFile)
         )
     })
     .catch(function (error) {
-        console.error('wth')
         console.error(error)
     })
