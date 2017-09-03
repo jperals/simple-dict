@@ -4,19 +4,19 @@
 import Express from 'express'
 import fs from 'fs'
 import livereload from 'connect-livereload'
-import qs from 'qs'
+import path from 'path'
 import renderFullPage from './renderPage'
 import yaml from 'js-yaml'
 
 const app = Express()
 const port = 3000
-const dataDir = './data'
+const dataDir = path.join(__dirname, 'data')
 
-app.use(Express.static('./static/'))
+app.use(Express.static(path.join(__dirname, 'static')))
 app.use('/data', Express.static(dataDir))
 app.use(livereload())
 
-app.get('/:dictId', function (req, res) {
+app.get('/dictionary/:dictId', function (req, res) {
     // Read the dictionary id from the request, if provided
     const dictId = req.params.dictId
     const dictPath = dataDir + '/dicts/' + dictId + '.yaml'

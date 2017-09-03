@@ -14,7 +14,7 @@ delete window.__PRELOADED_STATE__
 
 
 // Get the dictionary data from the corresponding JSON file
-const dictFile = 'data/dicts/' + preloadedState.dictId + '.yaml'
+const dictFile = '../../data/dicts/' + preloadedState.dictId + '.yaml'
 
 fetch(dictFile)
     .then(function (response) {

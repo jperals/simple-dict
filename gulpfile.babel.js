@@ -18,8 +18,9 @@ const sourcemaps  = require('gulp-sourcemaps')
 
 const renderPage = require('./src/renderPage')
 
-const serverDir = './build/server'
-const staticDir = './build/static'
+const buildDir = './build'
+const serverDir = buildDir + '/server'
+const staticDir = buildDir + '/static'
 const dictPath = './data/dicts'
 const vendorPackages = [
     'js-yaml',
@@ -31,7 +32,7 @@ const vendorPackages = [
 
 const cache = new Cache()
 
-// Remove all content inside `dist`, but the `dist` directory itself
+// Remove all content inside the server build, except the server build directory itself
 gulp.task('server:clean', function () {
     return del([serverDir + '/**', '!' + serverDir ])
 })
@@ -46,14 +47,19 @@ gulp.task('server:build', function () {
     return stream
 })
 
-// Start a server that serves files from `dist` and will reload on source changes
+// Reload the development server
+gulp.task('server:reload', function(callback) {
+    return runSequence('server:clean', 'server:build', ['server:sass', 'server:data', 'server:vendor', 'server:client'], callback)
+})
+
+// Start a server that will reload on source changes
 gulp.task('server:serve', ['server:build', 'server:client'], function () {
     livereload.listen()
     const stream = nodemon({
         script: serverDir + '/server.js',
         watch: 'src',
-        ext: 'js scss',
-        tasks: ['server:clean', 'server:build', 'server:client']
+        ext: 'js',
+        tasks: ['server:reload']
     }).on('restart', function(){
         gulp.src(serverDir + '/server.js')
             .pipe(livereload())
@@ -114,18 +120,19 @@ gulp.task('server:client', function () {
         .pipe(livereload())
 })
 
-// Remove all content inside `static`, but the `static` directory itself
+// Remove all content inside the static build, except the static build directory itself
 gulp.task('static:clean', function () {
     return del([staticDir + '/**', '!static'])
 })
 
-// Generate a static build in the `static` directory
+// Generate a static build
 gulp.task('static:build', function (callback) {
     fs.readdir(dictPath, function (err, files) {
         if (err) {
             console.error(error)
             return
         }
+        // Create a build in a separate directory for each existing dictionary
         for (const file of files) {
             fs.stat(dictPath + '/' + file, function (err, stats) {
                 if (err) {
@@ -171,18 +178,22 @@ gulp.task('gh-pages', function () {
     })
 })
 
+// Clean both the server build and the static build
 gulp.task('clean', ['server:clean', 'static:clean'])
 
+// Generate a static build, e.g. for publishing
 gulp.task('build', function(callback) {
     runSequence('static:clean', ['sass:build', 'static:build'], callback)
 })
 
+// Serve a development build that will regenerate on changes
 gulp.task('serve', function(callback) {
     runSequence('server:clean', 'server:sass', 'server:sass-watch', ['server:data', 'server:vendor'], 'server:serve', callback)
 })
 
+// Publish the static build to GitHub Pages
 gulp.task('publish', function(callback) {
-    runSequence('build', 'gh-pages', callback)
+    runSequence(staticDir, 'gh-pages', callback)
 })
 
 gulp.task('default', ['serve'])
