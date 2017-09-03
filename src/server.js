@@ -15,17 +15,15 @@ const dataDir = './data'
 app.use(Express.static('./static/'))
 app.use('/data', Express.static(dataDir))
 app.use(livereload())
-app.use(handleRender)
 
-function handleRender(req, res) {
+app.get('/:dictId', function (req, res) {
     // Read the dictionary id from the request, if provided
-    const params = qs.parse(req.query)
-    const dictId = params.dict
+    const dictId = req.params.dictId
     const dictPath = dataDir + '/dicts/' + dictId + '.yaml'
     const dictContent = yaml.safeLoad(fs.readFileSync(dictPath))
     // Send the rendered page back to the client
     res.send(renderFullPage({dictId: dictId, dictContent: dictContent}))
-}
+})
 
 console.log('Listening to port', port)
 app.listen(port)
