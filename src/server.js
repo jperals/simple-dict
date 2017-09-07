@@ -16,7 +16,7 @@ app.use(Express.static(path.join(__dirname, 'static')))
 app.use('/data', Express.static(dataDir))
 app.use(livereload())
 
-app.get('/dictionary/:dictId', function (req, res) {
+app.get('/:dictId', function (req, res) {
     // Read the dictionary id from the request, if provided
     const dictId = req.params.dictId
     const dictPath = dataDir + '/dicts/' + dictId + '.yaml'
