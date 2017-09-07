@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import Term from './term'
+import Term from './Term'
 
 class DictionaryApp extends Component {
 
