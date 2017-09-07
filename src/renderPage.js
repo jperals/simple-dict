@@ -28,14 +28,14 @@ function renderFullPage(state) {
             <head>
                 <title>Dictionary</title>
                 <link rel="icon" type="image/gif" href="data:image/gif;base64,R0lGODlhEAAQAIAAAAAAAAAAACH5BAkAAAEALAAAAAAQABAAAAIgjI+py+0PEQiT1lkNpppnz4HfdoEH2W1nCJRfBMfyfBQAOw==" />
-                <link rel="stylesheet" href="../../css/styles.css"></link>
+                <link rel="stylesheet" href="../css/styles.css"></link>
                 <script>
                   // WARNING: See the following for security issues around embedding JSON in HTML:
                   // http://redux.js.org/docs/recipes/ServerRendering.html#security-considerations
                   window.__PRELOADED_STATE__ = ${JSON.stringify({ dictId: state.dictId }).replace(/</g, '\\u003c')}
                 </script>
-                <script src="../../vendor.js"></script>
-                <script defer src="../../client.js"></script>
+                <script src="../vendor.js"></script>
+                <script defer src="../client.js"></script>
             </head>
             </body>
                 <div id="root">${html}</div>
