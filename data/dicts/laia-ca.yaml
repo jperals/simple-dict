@@ -1,0 +1,378 @@
+aba:
+  translation: aigua
+  pronunciation: /ˈa.βa/
+abi!: ai!
+afa:
+  translation: girafa
+  since: 07.07.2017
+  pronunciation: /ˈa.fa/
+aió:
+  translation: hola
+  source: de l'alemany _hallo_
+  pronunciation: /ˈa.ʝo/
+Allen:
+  translation: ulls
+  since: 26.08.2018
+  source: de l'alemany _Augen_
+apa!:
+  pronunciation: /ˈa.pa/
+  translation: apa!
+  source: del català
+  since: 2017
+ata!:
+  translation: salta!
+  pronunciation: /ˈa.ta/
+  source: del català
+  since: 2017
+ati:
+  pronunciation: /ˈa.ti/
+  translation: Atxís!
+  since: 12.05.2017
+atí:
+  pronunciation: /ˈa.ti/
+  translation: aquí
+ato:
+  translation: vehicle terrestre
+  source: de l'alemany _Auto_ (cotxe)
+  notes: '_Auto_ en alemany significa cotxe, però _Ato_ pot referir-se a pràcticament qualsevol vehicle: cotxes, motos, cotxets, bicicletes, barques...'
+  synonyms: auto
+aua:
+  translation: aigua
+aua!:
+  translation: au!
+  source: de l'alemany
+auó:
+  translation: hola
+  source: de l'alemany _hallo_
+  notes: sovint utilitzat per referir-se a la cançó _Hallo, hallo, schön, dass du da bist_
+  until: 27.08.2017
+avi: avi
+babau:
+  translation: gos
+  source: "de l'onomatopeia en alemany del lladruc: _Wau-wau!_"
+Baby:
+  translation: nadó
+  source: de l'alemany
+baia:
+  translation: En Joan petit quan balla
+Bai:
+  translation: pilota
+  source: de l'alemany _Ball_
+baio:
+  translation: cavall
+  source: del castellà _caballo_
+Ball:
+  translation: pilota
+  source: de l'alemany
+balol:
+  translation: cargol
+  since: 23.07.2017
+bato:
+  translation: barca
+  source: del castellà _barco_
+  since: 13.08.2017
+Bassa:
+  translation: aigua
+  source: de l'alemany _Wasser_
+basso:
+  translation: (porta'm en) braços
+  source: del castellà _brazos_
+  since: 08.07.2017
+bebe:
+  translation: bebé
+  source: probablement del castellà
+bebi:
+  translation: biberó
+  since: 07.2017
+bebo:
+  translation: truita
+  source: del castellà _huevo_
+  since: 08.07.2017
+Bett:
+  translation: llit
+  source: de l'alemany
+bibi:
+  - translation: nadó
+    source: probablement de l'alemany _Baby_ o del castellà _bebé_
+  - biberó
+bibo:
+  translation: llibre
+  source: del castellà _libro_
+  since: 08.2017
+bitte:
+  translation: si us plau
+  source: da l'alemany
+  since: 07.2017
+bó:
+  translation: sabó
+  since: 07.2017
+Bot:
+  translation: Bernd das Brot
+  synonyms: But, Pót, Put
+But:
+  translation: Bernd das Brot
+  synonyms: Bot, Pót, Put
+bote:
+  translation: barca
+  source: del castellà _bote_ i de l'alemany _Boot_
+daixa: gràcies
+das:
+  translation: això
+  source: de l'alemany
+dos: arròs
+Eis:
+  pronunciation: /ei̯s/
+  translation: gelat
+  source: de l'alemany
+Emma: Emma
+essen:
+  translation: menjar
+  source: de l'alemany
+  since: ~20.07.2017
+fola!:
+  translation: fora!
+  since: 08.2017
+  synonyms: fula!
+foto: foto
+fula!:
+  since: 08.2017
+  synonyms: fola!
+hallo:
+  translation: hola
+  since: 26.08.2017
+  source: de l'alemany
+Iaia: Laia
+iuixen:
+  translation: vull baixar pel tobogan
+  since: 08.2017
+  source: de l'alemany _rutschen_
+  synonyms: uixen
+  pronunciation: /juˈʃen/
+Laia: Laia
+lata:
+  translation: cullera
+  since: 13.08.2017
+  source: del castellà _cuchara_
+  pronunciation: /'la.ta/
+lolo:
+  translation: barret
+  since: 08.2017
+  source: del castellà _gorro_
+mà: mà
+má:
+  translation: més
+  source: del castellà _más_
+maio:
+  translation: bany
+  source: del castellà _baño_
+Mama: Mama
+Mami: Mami
+mamo: anem
+mamos: anem
+mano:
+  translation: mà
+  source: del castellà
+más:
+  translation: més
+  source: del castellà
+mem: anem
+més: més
+met:
+  - mitjonet
+  - xumet
+Mmmma: Emma
+mia!: mira!
+Mosse:
+  translation: Montse
+  since: ~02.07.2017
+motos:
+  translation: mocs
+  source: probablement del castellà _mocos_
+  since: ~11.06.2017
+Mut:
+  translation: boca
+  since: 26.08.2017
+  source: de l'alemany _Mund_
+muta:
+ translation: música
+ since: 23.06.2017
+nana:
+  translation: plàtan
+  source: de l'alemany _Banane_
+nas: nas
+Nasse:
+  translation: nas
+  since: 26.08.2017
+  source: de l'alemany _Nase_
+nei:
+  translation: no
+  source: de l'alemany _nein_
+nein:
+  pronunciation: /naɪ̯n/
+  translation: no
+  source: de l'alemany _nein_
+nen: nen
+nena: nena
+nina: gallina
+nomint:
+  translation: dormint
+  since: 08.07.2017
+no: no
+on, on:
+  translation: (onomatopeia del porc)
+  source: del castellà _oink, oink_
+oixo:
+  translation: ós
+  source: del castellà _oso_
+pan:
+  - translation: pa
+    source: del castellà
+  - elefant
+Papa: Papa
+papato:
+  translation: sabata
+  since: 23.05.2017
+Papi: Papi
+patas: patates
+pato:
+  source: del castellà _zapato_
+  synonym: papato
+  since: 05.2017
+Paua:
+  translation: Paula
+  since: 05.2017
+pé: peu
+peces:
+  translation: peixos
+  since: 07.2017
+  source: del castellà
+pelos:
+  translation: pèls
+  since: 27.08.2017
+  source: del castellà
+pet:
+  translation: pitet
+  since: 22.07.2017
+Pimi:
+  translation: Timmy
+  since: 23.07.2017
+pío:
+  translation: piu (onomatopeia de l'ocell)
+  source: del castellà
+Pit:
+  translation: Peppa Pig
+  since: 26.08.2017
+pita:
+  - translation: pica
+    since: 23.06.2017
+  - translation: porta?
+    since: 05.2017
+pono:
+  translation: em vull posar això
+  since: 08.2017
+  source: del castellà _¿te lo pongo?_
+poio:
+  translation: pollastre
+  source: del castellà
+pos!:
+  translation: salut! (brindis)
+  source: de l'alemany _Prost!_
+  since: 07.2017
+pota:
+  translation: boca
+  since: ~14.06.2017
+Pót:
+  synonyms: Bot, But, Put
+  translation: Bernd das Brot
+poto: foto
+puma:
+  translation: poma
+  since: 26.08.2017
+Put:
+  translation: Bernd das Brot
+  since: 23.06.2017
+  synonyms: Bot, But, Pót
+Sara:
+  translation: Sara
+  since: ~26.06.2017
+sí:
+  translation: sí
+  since: 29.06.2017
+sola:
+  - translation: jo sola
+    since: 13.08.2017
+    pronunciation: /ˈsɔ.ɫa/
+  - translation: ajuda'm
+    since: 13.08.2017
+    pronunciation: /ˈsɔ.ɫa/
+ta:
+  - translation: això
+    source: potser de l'alemany _das_
+  - translation: mira!
+    source: potser de l'alemany _da_ (allí)
+tanne:
+  translation: carn
+  source: del castellà _carne_
+  since: 21.07.2017
+tata: caca
+tatu:
+  translation: quètxup
+  since: 19.08.2017
+Tavi:
+  translation: Xavi
+  since: 08.2017
+té: té (imperatiu)
+tede: televisió
+ten: tren
+Teo: Teo
+teta:
+  - teta
+  - translation: jaqueta
+    since: 08.2017
+  - translation: galeta
+    since: 07.2017
+  - translation: jaqueta
+    since: 08.2017
+  - translation: lleteta
+    since: 07.2017
+tete: televisió
+teti: televisió
+teyi:
+  - translation: televisió
+  - translation: l'osset Teddy
+Tio: Teo
+Tita:
+  translation: Kika (canal infantil)
+  since: 07.2017
+tul:
+  translation: cul
+  since: 31.08.2017
+tutus:
+  - translation: cop de cap ("coco")
+    since: ~02.07.2017
+  - translation: cu-cut!
+    since: ~02.07.2017
+txussi:
+  translation: adéu
+  source: de l'alemany _tschüss_
+uhà:
+  translation: jugar
+  since: 07.2017
+uixen:
+  translation: vull baixar pel tobogan
+  since: 08.2017
+  source: de l'alemany _rutschen_
+  synonyms: iuixen
+  pronunciation: /uˈʃen/
+vai: cavall
+vale:
+  translation: d'acord
+  source: del castellà
+vaso:
+  translation: got
+  source: del castellà
+xabo:
+  translation: dinosaure (no aviari)
+  source: del castellà "dinosaurio"
+  since: 08.2017
+xaixa: gràcies
