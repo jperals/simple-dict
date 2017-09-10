@@ -5,4 +5,4 @@ function setSearchFilter(value) {
     }
 }
 
-module.exports = setSearchFilter
+export default setSearchFilter
