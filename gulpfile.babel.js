@@ -23,7 +23,7 @@ gulp.task('clean', ['server:clean', 'static:clean'])
 
 // Publish the static build to GitHub Pages
 gulp.task('publish', function(callback) {
-    runSequence(staticDir, 'gh-pages', callback)
+    runSequence('build', 'gh-pages', callback)
 })
 
 gulp.task('default', ['serve'])
