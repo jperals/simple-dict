@@ -8,7 +8,8 @@ class Term extends Component {
     render() {
         const data = this.props.termData
         return (
-            <div className="term" id={this.props.term}>
+            <div className="term">
+                <div className="anchor" id={this.props.term}></div>
                 <span className="written-form">
                     <a href={'#' + this.props.term}>
                         {this.props.term}

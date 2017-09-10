@@ -16,6 +16,10 @@
     opacity: 0.5;
   }
   & + .terms {
-    margin-top: 65px;
+    $spacing: 65px;
+    margin-top: $spacing;
+    .term .anchor {
+      transform: translateY(-$spacing);
+    }
   }
 }
