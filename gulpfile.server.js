@@ -54,7 +54,7 @@ gulp.task('server:serve', ['server:build', 'server:client'], function () {
     }).on('restart', function(){
         gulp.src(serverDir + '/server.js')
             .pipe(livereload())
-            .pipe(notify('Reloading page, please wait...'));
+            .pipe(notify('Reloading page, please wait...'))
     })
     return stream
 })
@@ -63,7 +63,9 @@ gulp.task('server:serve', ['server:build', 'server:client'], function () {
 gulp.task('server:sass', function () {
     return gulp.src('./src/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest(serverDir + '/static/css'));
+        .pipe(gulp.dest(serverDir + '/static/css'))
+        .pipe(livereload())
+        .pipe(notify('Reloading styles...'))
 })
 
 // Watch for changes in scss files, to compile again
