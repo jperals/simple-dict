@@ -1,0 +1,38 @@
+@import 'variables';
+
+.terms {
+  color: gray;
+  list-style: none;
+  padding-left: 0;
+  margin-left: $bodyMargin;
+  margin-right: $bodyMargin;
+  .term {
+    margin-bottom: 2rem;
+    .written-form {
+      a {
+        color: darkturquoise;
+        font-size: 175%;
+        font-weight: bold;
+        &:not(:hover) {
+          text-decoration: none;
+        }
+      }
+    }
+    .pronunciation {
+      color: lightgray;
+      margin-left: .5rem;
+    }
+    .source,
+    .since,
+    .synonyms,
+    .synonyms a {
+      color: darkgray;
+      font-size: 80%;
+    }
+    .definition {
+      font-size: 150%;
+      margin-top: .25rem;
+      margin-bottom: .25rem;
+    }
+  }
+}

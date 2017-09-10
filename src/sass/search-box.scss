@@ -1,0 +1,21 @@
+@import 'variables';
+
+.search-box {
+  $borderWidth: 1px;
+  $padding: $bodyMargin;
+  display: inline-block;
+  font-size: 125%;
+  position: fixed;
+  top: 0;
+  padding: $padding;
+  border-width: 0 0 $borderWidth 0;
+  border-color: lightgrey;
+  margin: 0;
+  width: calc(100% - #{2*$padding});
+  &::placeholder {
+    opacity: 0.5;
+  }
+  & + .terms {
+    margin-top: 65px;
+  }
+}

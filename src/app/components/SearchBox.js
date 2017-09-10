@@ -14,7 +14,7 @@ class SearchBox extends Component {
 
     render() {
         return (
-            <input type="text" onChange={this.handleChange.bind(this)}></input>
+            <input type="text" className="search-box" placeholder="Search" onChange={this.handleChange.bind(this)}></input>
         )
     }
 
