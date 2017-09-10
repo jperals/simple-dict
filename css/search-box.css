@@ -1,0 +1,16 @@
+.search-box {
+  display: inline-block;
+  font-size: 125%;
+  position: fixed;
+  top: 0;
+  padding: 8px;
+  border-width: 0 0 1px 0;
+  border-color: lightgrey;
+  margin: 0;
+  width: calc(100% - 16px); }
+  .search-box::placeholder {
+    opacity: 0.5; }
+  .search-box + .terms {
+    margin-top: 65px; }
+    .search-box + .terms .term .anchor {
+      transform: translateY(-65px); }

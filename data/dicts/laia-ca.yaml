@@ -135,6 +135,7 @@ fola!:
   synonyms: fula!
 foto: foto
 fula!:
+  translation: fora!
   since: 08.2017
   synonyms: fola!
 hallo:
@@ -235,6 +236,7 @@ papato:
 Papi: Papi
 patas: patates
 pato:
+  translation: sabata
   source: del castellà _zapato_
   synonym: papato
   since: 05.2017
@@ -333,6 +335,8 @@ teta:
     since: 07.2017
   - translation: jaqueta
     since: 08.2017
+  - translation: bicicleta
+    since: 08.2017
   - translation: lleteta
     since: 07.2017
 tete: televisió
@@ -372,7 +376,7 @@ vaso:
   translation: got
   source: del castellà
 xabo:
-  translation: dinosaure (no aviari)
+  translation: dinosaure
   source: del castellà "dinosaurio"
   since: 08.2017
 xaixa: gràcies

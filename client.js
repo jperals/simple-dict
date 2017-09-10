@@ -9011,19 +9011,38 @@ module.exports=/[\0-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-
 },{}],77:[function(require,module,exports){
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+function setSearchFilter(value) {
+    return {
+        type: 'SET_SEARCH_FILTER',
+        value: value
+    };
+}
+
+exports.default = setSearchFilter;
+
+},{}],78:[function(require,module,exports){
+'use strict';
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
 
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _term = require('./term');
+var _react = require('react');
 
-var _term2 = _interopRequireDefault(_term);
+var _react2 = _interopRequireDefault(_react);
+
+var _SearchBox = require('./SearchBox');
+
+var _SearchBox2 = _interopRequireDefault(_SearchBox);
+
+var _TermList = require('./TermList');
+
+var _TermList2 = _interopRequireDefault(_TermList);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9045,18 +9064,11 @@ var DictionaryApp = function (_Component) {
     _createClass(DictionaryApp, [{
         key: 'render',
         value: function render() {
-            var dictId = this.context.store.getState().dictId;
-            var content = this.context.store.getState().dictContent;
             return _react2.default.createElement(
-                'ul',
-                { className: 'terms' },
-                Object.keys(content).map(function (term, i) {
-                    return _react2.default.createElement(
-                        'li',
-                        { key: 'term-' + i },
-                        _react2.default.createElement(_term2.default, { term: term, termData: content[term] })
-                    );
-                })
+                'div',
+                null,
+                _react2.default.createElement(_SearchBox2.default, null),
+                _react2.default.createElement(_TermList2.default, null)
             );
         }
     }]);
@@ -9071,7 +9083,7 @@ DictionaryApp.contextTypes = {
 
 module.exports = DictionaryApp;
 
-},{"./term":79,"prop-types":68,"react":"react"}],78:[function(require,module,exports){
+},{"./SearchBox":80,"./TermList":82,"prop-types":68,"react":"react"}],79:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9127,7 +9139,65 @@ function createMarkup(data) {
 
 exports.default = Definition;
 
-},{"markdown-it":7,"react":"react"}],79:[function(require,module,exports){
+},{"markdown-it":7,"react":"react"}],80:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _actions = require('../actions');
+
+var _actions2 = _interopRequireDefault(_actions);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SearchBox = function (_Component) {
+    _inherits(SearchBox, _Component);
+
+    function SearchBox() {
+        _classCallCheck(this, SearchBox);
+
+        return _possibleConstructorReturn(this, (SearchBox.__proto__ || Object.getPrototypeOf(SearchBox)).apply(this, arguments));
+    }
+
+    _createClass(SearchBox, [{
+        key: 'handleChange',
+        value: function handleChange(event) {
+            this.context.store.dispatch((0, _actions2.default)({ value: event.target.value }));
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement('input', { type: 'text', className: 'search-box', placeholder: 'Search', onChange: this.handleChange.bind(this) });
+        }
+    }]);
+
+    return SearchBox;
+}(_react.Component);
+
+SearchBox.contextTypes = {
+    store: _propTypes2.default.object.isRequired
+};
+exports.default = SearchBox;
+
+},{"../actions":77,"prop-types":68,"react":"react"}],81:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9173,7 +9243,8 @@ var Term = function (_Component) {
             var data = this.props.termData;
             return _react2.default.createElement(
                 'div',
-                { className: 'term', id: this.props.term },
+                { className: 'term' },
+                _react2.default.createElement('div', { className: 'anchor', id: this.props.term }),
                 _react2.default.createElement(
                     'span',
                     { className: 'written-form' },
@@ -9221,18 +9292,102 @@ var Term = function (_Component) {
 
 exports.default = Term;
 
-},{"./Definition":78,"markdown-it":7,"react":"react"}],80:[function(require,module,exports){
-"use strict";
+},{"./Definition":79,"markdown-it":7,"react":"react"}],82:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _reactRedux = require('react-redux');
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _Term = require('./Term');
+
+var _Term2 = _interopRequireDefault(_Term);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var TermList = function (_Component) {
+    _inherits(TermList, _Component);
+
+    function TermList() {
+        _classCallCheck(this, TermList);
+
+        return _possibleConstructorReturn(this, (TermList.__proto__ || Object.getPrototypeOf(TermList)).apply(this, arguments));
+    }
+
+    _createClass(TermList, [{
+        key: 'render',
+        value: function render() {
+            var state = this.context.store.getState();
+            var content = state.dictContent;
+            var filterValue = state.filterValue;
+            return _react2.default.createElement(
+                'ul',
+                { className: 'terms' },
+                Object.keys(content).filter(function (str) {
+                    return !filterValue || str.toLowerCase().includes(filterValue);
+                }).map(function (term, i) {
+                    return _react2.default.createElement(
+                        'li',
+                        { key: 'term-' + i },
+                        _react2.default.createElement(_Term2.default, { term: term, termData: content[term] })
+                    );
+                })
+            );
+        }
+    }]);
+
+    return TermList;
+}(_react.Component);
+
+TermList.contextTypes = {
+    store: _propTypes2.default.object.isRequired
+};
+
+
+function mapStateToProps(state) {
+    state.filterValue = state.filterValue ? state.filterValue.value.toLowerCase() : state.filterValue;
+    return state;
+}
+
+// Exporting connect(mapStateToProps)(TermList) instead of just the TermList class
+// lets the component listen for changes in the store and eventually re-render
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(TermList);
+
+},{"./Term":81,"prop-types":68,"react":"react","react-redux":"react-redux"}],83:[function(require,module,exports){
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
 exports.default = function (state, action) {
+    switch (action.type) {
+        case 'SET_SEARCH_FILTER':
+            state.filterValue = action.value;
+            return Object.assign({}, state);
+    }
     return state;
 };
 
-},{}],81:[function(require,module,exports){
+},{}],84:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -9284,6 +9439,6 @@ fetch(dictFile).then(function (response) {
     console.error(error);
 });
 
-},{"./app/components/App":77,"./app/reducers":80,"js-yaml":"js-yaml","react":"react","react-dom":"react-dom","react-redux":"react-redux","redux":"redux"}]},{},[81]);
+},{"./app/components/App":78,"./app/reducers":83,"js-yaml":"js-yaml","react":"react","react-dom":"react-dom","react-redux":"react-redux","redux":"redux"}]},{},[84]);
 
 //# sourceMappingURL=client.js.map
