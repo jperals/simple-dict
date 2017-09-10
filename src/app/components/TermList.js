@@ -38,4 +38,6 @@ function mapStateToProps(state) {
     return state
 }
 
+// Exporting connect(mapStateToProps)(TermList) instead of just the TermList class
+// lets the component listen for changes in the store and eventually re-render
 export default connect(mapStateToProps)(TermList)
