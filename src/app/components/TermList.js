@@ -35,7 +35,7 @@ class TermList extends Component {
 
 function mapStateToProps(state) {
     state.filterValue = state.filterValue? state.filterValue.value.toLowerCase() : state.filterValue
-    return Object.assign({}, state)
+    return state
 }
 
 export default connect(mapStateToProps)(TermList)
