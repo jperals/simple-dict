@@ -5,16 +5,24 @@ body, input {
 body {
   margin: 0; }
 
+@media (min-width: 640px) {
+  .terms .term-head, .terms .term-body {
+    display: inline-block;
+    vertical-align: top; }
+  .terms .term-head {
+    width: 142px;
+    margin-right: 8px; } }
+
 .terms {
   color: gray;
   list-style: none;
-  padding-left: 0;
-  margin-left: 8px;
-  margin-right: 8px; }
+  padding-left: 0; }
   .terms .term {
-    margin-bottom: 2rem; }
+    border-bottom: 1px solid #E7E7E7;
+    padding: 0 8px 2rem;
+    margin-top: 2rem; }
     .terms .term .written-form a {
-      color: darkturquoise;
+      color: #0c9dbf;
       font-size: 175%;
       font-weight: bold; }
       .terms .term .written-form a:not(:hover) {
@@ -28,6 +36,8 @@ body {
     .terms .term .synonyms a {
       color: darkgray;
       font-size: 80%; }
+    .terms .term .translations {
+      padding-left: 0; }
     .terms .term .definition {
       font-size: 150%;
       margin-top: .25rem;
@@ -46,6 +56,6 @@ body {
   .search-box::placeholder {
     opacity: 0.5; }
   .search-box + .terms {
-    margin-top: 65px; }
+    margin-top: 75px; }
     .search-box + .terms .term .anchor {
-      transform: translateY(-65px); }
+      transform: translateY(-75px); }

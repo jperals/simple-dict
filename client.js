@@ -9246,42 +9246,50 @@ var Term = function (_Component) {
                 { className: 'term' },
                 _react2.default.createElement('div', { className: 'anchor', id: this.props.term }),
                 _react2.default.createElement(
-                    'span',
-                    { className: 'written-form' },
+                    'div',
+                    { className: 'term-head' },
                     _react2.default.createElement(
-                        'a',
-                        { href: '#' + this.props.term },
-                        this.props.term
+                        'span',
+                        { className: 'written-form' },
+                        _react2.default.createElement(
+                            'a',
+                            { href: '#' + this.props.term },
+                            this.props.term
+                        )
+                    ),
+                    data.pronunciation && _react2.default.createElement(
+                        'span',
+                        { className: 'pronunciation' },
+                        data.pronunciation
+                    ),
+                    data.source && _react2.default.createElement('div', { className: 'source', dangerouslySetInnerHTML: { __html: md.renderInline(data.source) } }),
+                    data.since && _react2.default.createElement(
+                        'div',
+                        { className: 'since' },
+                        'afegit: ',
+                        data.since
+                    ),
+                    data.synonyms instanceof Array && _react2.default.createElement(
+                        'div',
+                        { className: 'synonyms' },
+                        'Sin\xF2nims: ',
+                        data.synonyms.join(', ')
                     )
                 ),
-                data.pronunciation && _react2.default.createElement(
-                    'span',
-                    { className: 'pronunciation' },
-                    data.pronunciation
-                ),
-                data instanceof Array ? _react2.default.createElement(
-                    'ol',
-                    { className: 'translations' },
-                    data.map(function (definition, i) {
-                        return _react2.default.createElement(
-                            'li',
-                            { key: 'definition-' + i },
-                            _react2.default.createElement(_Definition2.default, { definition: definition })
-                        );
-                    })
-                ) : _react2.default.createElement(_Definition2.default, { definition: data }),
-                data.source && _react2.default.createElement('div', { className: 'source', dangerouslySetInnerHTML: { __html: md.renderInline(data.source) } }),
-                data.since && _react2.default.createElement(
+                _react2.default.createElement(
                     'div',
-                    { className: 'since' },
-                    'afegit: ',
-                    data.since
-                ),
-                data.synonyms instanceof Array && _react2.default.createElement(
-                    'div',
-                    { className: 'synonyms' },
-                    'Sin\xF2nims: ',
-                    data.synonyms.join(', ')
+                    { className: 'term-body' },
+                    data instanceof Array ? _react2.default.createElement(
+                        'ol',
+                        { className: 'translations' },
+                        data.map(function (definition, i) {
+                            return _react2.default.createElement(
+                                'li',
+                                { key: 'definition-' + i },
+                                _react2.default.createElement(_Definition2.default, { definition: definition })
+                            );
+                        })
+                    ) : _react2.default.createElement(_Definition2.default, { definition: data })
                 )
             );
         }

@@ -11,6 +11,6 @@
   .search-box::placeholder {
     opacity: 0.5; }
   .search-box + .terms {
-    margin-top: 65px; }
+    margin-top: 75px; }
     .search-box + .terms .term .anchor {
-      transform: translateY(-65px); }
+      transform: translateY(-75px); }

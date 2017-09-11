@@ -1,0 +1,7 @@
+@media (min-width: 640px) {
+  .terms .term-head, .terms .term-body {
+    display: inline-block;
+    vertical-align: top; }
+  .terms .term-head {
+    width: 142px;
+    margin-right: 8px; } }
