@@ -9421,7 +9421,7 @@ var preloadedState = window.__PRELOADED_STATE__;
 delete window.__PRELOADED_STATE__;
 
 // Get the dictionary data from the corresponding JSON file
-var dictFile = '../../data/dicts/' + preloadedState.dictId + '.yaml';
+var dictFile = '../data/dicts/' + preloadedState.dictId + '.yaml';
 
 fetch(dictFile).then(function (response) {
     return response.text();
