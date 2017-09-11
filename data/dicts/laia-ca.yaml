@@ -106,6 +106,9 @@ bitte:
 bó:
   translation: sabó
   since: 07.2017
+Bòbim:
+  translation: Robin
+  since: 08.09.2017
 Bot:
   translation: Bernd das Brot
   synonyms: But, Pót, Put
@@ -294,8 +297,8 @@ Put:
   translation: Bernd das Brot
   since: 23.06.2017
   synonyms: Bot, But, Pót
-Sara:
-  translation: Sara
+Sarah:
+  translation: Sarah
   since: ~26.06.2017
 sí:
   translation: sí
