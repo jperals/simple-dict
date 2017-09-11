@@ -146,6 +146,10 @@ hallo:
   since: 26.08.2017
   source: de l'alemany
 Iaia: Laia
+ihà:
+  translation: vull baixar
+  synonyms: uhà
+  since: 09.2017
 iuixen:
   translation: vull baixar pel tobogan
   since: 08.2017
@@ -222,6 +226,9 @@ nomint:
   translation: dormint
   since: 08.07.2017
 no: no
+Nuia:
+  translation: Núria
+  since: 08.2017
 on, on:
   translation: (onomatopeia del porc)
   source: del castellà _oink, oink_
@@ -276,6 +283,11 @@ pono:
   translation: em vull posar això
   since: 08.2017
   source: del castellà _¿te lo pongo?_
+  synonyms: ponos
+ponos:
+  translation: em vull posar això
+  synonyms: pono
+  since: 09.09.2017
 poio:
   translation: pollastre
   source: del castellà
@@ -326,14 +338,13 @@ tatu:
 Tavi:
   translation: Xavi
   since: 08.2017
+  synonims: Xavi
 té: té (imperatiu)
 tede: televisió
 ten: tren
 Teo: Teo
 teta:
   - teta
-  - translation: jaqueta
-    since: 08.2017
   - translation: galeta
     since: 07.2017
   - translation: jaqueta
@@ -351,6 +362,10 @@ Tio: Teo
 Tita:
   translation: Kika (canal infantil)
   since: 07.2017
+tole!:
+  translation: corre!
+  source: del castellà _¡corre!_
+  since: 08.2017
 tul:
   translation: cul
   since: 31.08.2017
@@ -359,6 +374,10 @@ tutus:
     since: ~02.07.2017
   - translation: cu-cut!
     since: ~02.07.2017
+Txaua:
+  translation: àvia Rosaura
+  since: 10.09.2017
+  source: del sobrenom _Chagua_
 txussi:
   translation: adéu
   source: de l'alemany _tschüss_
@@ -383,3 +402,6 @@ xabo:
   source: del castellà "dinosaurio"
   since: 08.2017
 xaixa: gràcies
+Xavi:
+  translation: Xavi
+  since: 10.09.2017

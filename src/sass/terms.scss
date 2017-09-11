@@ -1,16 +1,17 @@
 @import 'variables';
+@import 'terms-m-l-xl';
 
 .terms {
   color: gray;
   list-style: none;
   padding-left: 0;
-  margin-left: $bodyMargin;
-  margin-right: $bodyMargin;
   .term {
-    margin-bottom: 2rem;
+    border-bottom: 1px solid $lighterGray;
+    padding: 0 $bodyMargin 2rem;
+    margin-top: 2rem;
     .written-form {
       a {
-        color: darkturquoise;
+        color: rgb(12, 157, 191);
         font-size: 175%;
         font-weight: bold;
         &:not(:hover) {
@@ -28,6 +29,9 @@
     .synonyms a {
       color: darkgray;
       font-size: 80%;
+    }
+    .translations {
+      padding-left: 0;
     }
     .definition {
       font-size: 150%;

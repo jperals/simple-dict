@@ -16,7 +16,7 @@
     opacity: 0.5;
   }
   & + .terms {
-    $spacing: 65px;
+    $spacing: 75px;
     margin-top: $spacing;
     .term .anchor {
       transform: translateY(-$spacing);
